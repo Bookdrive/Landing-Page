@@ -1,0 +1,457 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Background & Basic Styles ------------------------------------------------------------------------------------*/
+
+.upper-page{
+    background-image: url(images/uppperpage/upperbg.png);
+    width: 100%;
+    background-size: cover;
+}
+.middle-page{
+    background-image: url(images/middlepage/middlepagebg.png);
+    background-size: cover;
+    width: 100%;
+}
+.bottom-page{
+    background-image: url(images/bottompage/bottompagebg.png);
+    background-size: cover;
+    width: 100%;
+}
+.footer{
+    min-height: 16vw;
+    background-color: #03045e;
+}
+.wrapper{  
+    width: 90vw;
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+/* STYLES FOR TOP PAGE -----------------------------------------------------------------------------------------*/
+    /* Navbar Styles ----------------------------------------------------------------------------*/
+.logo img{
+    max-width: 6rem;
+    padding-top: min(1.5vw, 2rem);
+}
+header a{
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #03045e;
+}
+.register button{
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 3rem;
+    padding: .6rem 1rem;
+    transition: all 0.4s;
+}
+.sign button{
+    background-color: rgba(76, 175, 80, 0);
+    color: black;
+    border: solid black ;
+    border-radius: 3rem;
+    padding: .44rem 1rem;
+    margin-left: 1rem;
+    transition: all 0.4s;
+    position: relative;
+}
+.register button:hover, .sign button:hover {
+    box-shadow: 6px 6px white;
+    transition: .3s;
+}
+header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav ul li{
+    padding-left: 30px;
+    position: relative;
+}
+        /* Navigation links animation */
+nav ul li::before{
+    content: '';
+    position: absolute;
+    left: 25px;
+    right: 0;
+    bottom: 0;
+    height: .1rem;
+    width: 4rem;
+    background-color:#06b6ce;
+    transition: transform 300ms ease-in-out;
+    transform: scaleX(0);
+}
+nav ul li:hover::before,
+nav ul li:focus::before {
+    transform: scaleX(1);
+}
+    /* Sell & Explore Button Styles -----------------------------------------------------------*/
+.sell-btn{
+    background-image: linear-gradient(180deg, #74ddf2, #06b6ce);
+    color: white;
+    border-radius: 10px;
+    border: solid white 2px;
+    box-shadow: 8px 8px 8px lightblue;
+    padding: 0.8rem;
+    max-width: 6.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.sell-btn:hover {
+    animation: pulse 1s infinite;
+    transition: .3s;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    70% {
+      transform: scale(.9);
+    }
+      100% {
+      transform: scale(1);
+    }
+  }
+.sell-btn span{
+    padding-right: 15%;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform:uppercase
+}
+.rupee img{
+    padding-left: 20%;
+    color: white;
+    max-width: 80%;
+}
+.explore-btn{
+    background-image: linear-gradient(180deg, #74ddf2, #06b6ce);
+    color: white;
+    border-radius: 15px;
+    border: solid white 3px;
+    box-shadow: 8px 8px 8px lightblue;
+    padding: 0 10px;
+    width: 10rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform ease-in-out 0.3s;
+}
+.explore-btn:hover{
+    transform:scale(1.2, 1.2);
+}
+.explore-btn span{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+    /* Upper Container except Navbar ---------------------------------------------------------*/
+.upper-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-left-page{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    flex-basis: 25rem;
+}
+.upper-heading h1{
+    font-family: Poppins;
+    font-size: 3rem;
+    color: #0c0c39;
+    line-height: 1.4;
+}
+.upper-heading p{
+    font-family: Nunito;
+    color: #34343d;
+    padding-top: 1rem;
+    font-size: larger;
+}
+.top-right-page{
+    position: relative;
+    flex-basis: 25rem;
+}
+.doodle1 img{
+    width: 30vw;
+    min-width: 30rem;
+}
+
+
+
+
+
+
+
+/* .top-right-page:hover::after{
+    content: '';
+    position: absolute;
+    background-image: url(images/uppperpage/comment1.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    bottom: 100px;
+    left: 20vw;
+}
+.top-right-page:hover::before{
+    content: '';
+    position: absolute;
+    background-image: url(images/uppperpage/comment2.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    bottom: 2vw;
+    left: 0vw;
+} */
+
+
+/*-------------------------------------------------MIDDLE PAGE----------------------------------------------------------*/
+
+    /* Middle Heading & Container Styles -------------------------------*/
+
+.middle-heading{
+    display: flex;
+    justify-content: center;
+    font-family: Poppins;
+    font-size: 2.5vw;
+    position: relative;
+}
+/* .middle-heading::after{
+    content: '';
+    position: absolute;
+    background-image: url(images/bottompage/stroke3.png);
+    background-repeat: no-repeat;
+    background-size: 4vw;
+    left: 50vw;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+} */
+.middle-container{
+    display: flex;
+    align-items: center;
+    height: 50rem;
+    position: relative;
+}
+
+    /* Review Card Styles */
+      .review-wrapper .card{
+        background: white;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        right: 0rem;
+        top: 17rem;
+        justify-content: space-between;
+        border-radius: .8rem;
+        animation: animate 15s linear infinite;
+        animation-delay: calc(3s * var(--delay));
+      }
+      .outer:hover .card{
+        animation-play-state: paused;
+      }
+      .review-wrapper .card:last-child{
+        animation-delay: calc(-3s * var(--delay));
+      }
+      @keyframes animate {
+        0%{
+          opacity: 0;
+          transform: translateY(100%) scale(0.5);
+        }
+        5%, 20%{
+          opacity: 0.4;
+          transform: translateY(100%) scale(0.7);
+        }
+        25%, 40%{
+          opacity: 1;
+          pointer-events: auto;
+          transform: translateY(0%) scale(1);
+        }
+        45%, 60%{
+          opacity: 0.4;
+          transform: translateY(-100%) scale(0.7);
+        }
+        65%, 100%{
+          opacity: 0;
+          transform: translateY(-100%) scale(0.5);
+        }
+      }
+.card{
+    height: 14rem;
+    width: 25rem;
+    background-color: white;
+}
+.review-1-img img{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 3rem;
+}
+.review-1-star img{
+    position: absolute;
+    height: 5rem;
+    top: 1rem;
+    right: 2rem;
+
+}
+.card .divider{
+    position: absolute;
+    width: 21rem;
+    left: 2rem;
+    height: 0.08rem;
+    background-color: #dddddd;
+
+}
+.card h3{
+    position: absolute;
+    left: 7rem;
+    top: 2.2rem;
+    color: #1f1f1f;
+    font-family: Nunito, Arial;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+.card h4{
+    position: absolute;
+    left: 7rem;
+    top:4rem;
+    color: #636363;
+    font-family: Nunito, Arial;
+    font-size: .8rem;
+}
+.card p{
+    position: absolute;
+    text-align: left;
+    top: 8rem;
+    font-family: Nunito;
+    font-size: 0.8rem;
+    color: rgb(172, 172, 172);
+    line-height: 1.5;
+    font-weight: 500;
+    left: 2rem;
+    width: 80%;
+}
+
+    /* Doodle-2 Styles */
+.doodle2 img{
+    max-height: 25rem;
+}
+
+/* STYLES FOR BOTTOM PAGE -------------------------------------------------------------------------------------------*/
+
+    /* Positioning in Bottom Container */
+
+.bottom-container{
+    min-height: 40vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-between;
+}
+.bottom-left-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 30rem;
+    align-items: center;
+}
+    /* Bottom Heading styles */
+
+.bottom-heading{
+    font-family: Poppins;
+    font-size: 2.5vw;
+    color: #03045e;
+}
+.bottom-left-container h3{
+    font-family: Poppins;
+    color: #49494e;
+}
+
+    /* Bottom-Image Styles */
+
+.book-samples img{
+    width: 12rem;
+    transition: transform ease-in-out 0.3s;
+}
+.book-samples img:hover{
+    transform: scale(1.1); 
+}
+.book-samples{
+    display: flex;
+    align-items: center;
+}
+.bottom-right-container img{
+    width: 23rem;
+}
+
+/* STYLES FOR FOOTER --------------------------------------------------------------------------------------*/
+
+/* --------------------Footer-------------------------------------- */
+.End{
+    height: 10rem;
+    background-color: #181b3e;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+.End a{
+    display: inline-block;
+    margin: auto 1rem;
+    color: white;
+}
+.End a:hover{
+    color: #74ddf2;
+}
+
+
+
+@media screen and (max-width: 600px){
+    .burger-nav{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-image: url(images/uppperpage/menu.png);
+        background-repeat: no-repeat;
+        background-size: 40px;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+
+
+    .book-samples img{
+        width: 4rem;
+        transition: transform ease-in-out 0.3s;
+    }
+}
